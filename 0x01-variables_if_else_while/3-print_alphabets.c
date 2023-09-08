@@ -13,9 +13,9 @@ int main(void)
 	char i = 'a';
 	char j = 'A';
 
-	for (; i < 'z';)
+	for (; i < 'z'; i++)
 		putchar(i);
-	for (; j < 'Z';)
+	for (; j < 'Z'; j++)
 		putchar(j);
 	putchar('\n');
 	return (0);
