@@ -10,7 +10,7 @@ int main(void)
 {
 	char c = 'a';
 
-	for (; c < 'z'; c++)
+	for (; c < '['; c++)
 	{
 		if (c == 'q' || c == 'e')
 			continue;
