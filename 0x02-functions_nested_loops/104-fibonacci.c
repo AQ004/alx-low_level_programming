@@ -11,7 +11,7 @@ int numlength(int num_s)
 	int length = 0;
 	if (!num_s)
 		return (1);
-	while (num)
+	while (num_s)
 	{
 		num_s = num_s / 10;
 		length +=1;
