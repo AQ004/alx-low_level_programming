@@ -2,19 +2,20 @@
 
 /**
  * numlength - calculate the length of any number
- *
+ * @num_s: the input of the function
  * Return: length of the number
  */
 
 int numlength(int num_s)
 {
 	int length = 0;
+
 	if (!num_s)
 		return (1);
 	while (num_s)
 	{
 		num_s = num_s / 10;
-		length +=1;
+		length += 1;
 	}
 	return (length);
 }
@@ -30,7 +31,7 @@ int main(void)
 	int counter, initial_0s;
 	unsigned long num1 = 1, num2 = 2, sum;
 	unsigned long max = 100000000;
-	unsigned long num1_ = 0, num2_ = 0, sum_=0;
+	unsigned long num1_ = 0, num2_ = 0, sum_ = 0;
 
 	for (counter = 1; counter <= 98; counter++)
 	{
