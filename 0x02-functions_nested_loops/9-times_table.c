@@ -28,6 +28,8 @@ void times_table(void)
 					goto x;
 				_putchar(',');
 				_putchar(' ');
+				if (i * (j + 1) > 9)
+					continue;
 				_putchar(' ');
 			}
 		}
