@@ -23,7 +23,8 @@ void print_times_table(int n)
 						goto x;
 					_putchar(',');
 					_putchar(' ');
-					_putchar(' ');
+					if (i * (j + 1) < 100)
+						_putchar(' ');
 				}
 				else if (i * j > 99)
 				{
@@ -43,7 +44,6 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-					if (i * (j + 1) > 9)
-						continue;
-					_putchar(' ');
+					if (i * (j + 1) < 10)
+						_putchar(' ');
 				} } x: _putchar('\n'); } } }
