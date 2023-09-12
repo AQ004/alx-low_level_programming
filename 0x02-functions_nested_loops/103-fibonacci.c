@@ -18,5 +18,6 @@ int main(void)
 		num1 = num2;
 		num2 = sum;
 	}
+	printf("%d\n", sum1);
 	return (0);
 }
