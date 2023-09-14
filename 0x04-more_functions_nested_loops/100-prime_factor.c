@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <math.h>
 /**
  * main - Entry point
  *
@@ -8,15 +8,20 @@
 
 int main(void)
 {
-	long int i, j, size = 612852475143;
+	long unsigned largest_num, j, number = 612852475143;
 
-	for (i = 2; i < size; i++)
+	for (; num % 2 == 0; num /=2)
+		largest_num = 2;
+	for (j = 3; j <= sqrt(number); j += 2)
 	{
-		if (size % i == 0)
+		while (number % j == 0)
 		{
-			size = size / i;
+			largest_num = j;
+			num /= j;
 		}
 	}
-	printf("%ld\n", i);
+	if (num > 2)
+		largest_num = number;
+	printf("%lu\n", largest_num);
 	return (0);
 }
