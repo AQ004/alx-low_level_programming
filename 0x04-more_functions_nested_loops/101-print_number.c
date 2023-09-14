@@ -12,8 +12,7 @@ void print_number(int n)
 		n = -1 * n;
 		_putchar('-');
 	}
-	
 	if (n / 10 > 0)
-		print_number(n / 10);
+		print_number(n / 10); /* Recursion */
 	_putchar(n % 10 + '0');
 }
