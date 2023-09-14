@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	unsigned long i, j, size = 612852475143;
+	long int i, j, size = 612852475143;
 
 	for (i = 2; i < size; i++)
 	{
@@ -17,6 +17,6 @@ int main(void)
 			size = size / i;
 		}
 	}
-	printf("%lu\n", i);
+	printf("%ld\n", i);
 	return (0);
 }
