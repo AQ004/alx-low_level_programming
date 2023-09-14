@@ -8,7 +8,8 @@
 
 int main(void)
 {
-	unsigned long i,j, size =612852475143;
+	unsigned long i, j, size = 612852475143;
+
 	for (i = 2; i < size; i++)
 	{
 		if (size % i == 0)
