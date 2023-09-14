@@ -7,12 +7,14 @@
 
 void print_number(int n)
 {
-	if (n < 0)
+	unsigned int num = n;
+
+	if (num < 0)
 	{
-		n = -1 * n;
+		num = -1 * num;
 		_putchar('-');
 	}
-	if (n / 10 > 0)
-		print_number(n / 10); /* Recursion */
-	_putchar(n % 10 + '0');
+	if (num / 10 > 0)
+		print_number(num / 10); /* Recursion */
+	_putchar(num % 10 + '0');
 }
