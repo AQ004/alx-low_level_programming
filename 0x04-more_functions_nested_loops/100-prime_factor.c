@@ -8,19 +8,19 @@
 
 int main(void)
 {
-	long unsigned largest_num, j, number = 612852475143;
+	unsigned long largest_num, j, number = 612852475143;
 
-	for (; num % 2 == 0; num /=2)
+	for (; number % 2 == 0; number /= 2)
 		largest_num = 2;
 	for (j = 3; j <= sqrt(number); j += 2)
 	{
 		while (number % j == 0)
 		{
 			largest_num = j;
-			num /= j;
+			number /= j;
 		}
 	}
-	if (num > 2)
+	if (number > 2)
 		largest_num = number;
 	printf("%lu\n", largest_num);
 	return (0);
