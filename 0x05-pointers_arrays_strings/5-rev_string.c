@@ -11,12 +11,11 @@ void rev_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 		;
-	i--;
 	for (j = 0; j < i / 2; j++)
 	{
 		/*	swap	*/
-		s[i - j] += s[j];
-		s[j] = s[i - j] - s[j];
-		s[i - j] -= s[j];
+		s[i - 1 - j] += s[j];
+		s[j] = s[i - 1 - j] - s[j];
+		s[i - 1 - j] -= s[j];
 	}
 }
