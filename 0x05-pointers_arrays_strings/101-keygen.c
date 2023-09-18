@@ -17,11 +17,11 @@ int main(void)
 	char s;
 
 	srand(time(NULL));
-	for (;sum <= 2635; sum += s)
+	for (;sum <= 2645; sum += s)
 	{
 		s = rand() % 128;
 		putchar(s);
 	}
-	putchar(2672 - sum);
+	putchar(2772 - sum);
 	return (0);
 }
