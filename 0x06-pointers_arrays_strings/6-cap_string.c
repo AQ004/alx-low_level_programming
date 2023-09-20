@@ -16,12 +16,13 @@ char *cap_string(char *str)
 	while (*str)
 	{
 
-		for (i = 0; i < 13; i++)
-		{
-			if (*str == separators[i])
-				foundSep = 1;
-		}
-		if (islower(*str) && foundSep)
+		if (1)
+			for (i = 0; i < 13; i++)
+			{
+				if (*str == separators[i])
+					foundSep = 1;
+			}
+		else if (islower(*str) && foundSep)
 		{
 			*str -= 'a' - 'A';
 			foundSep = 0;
