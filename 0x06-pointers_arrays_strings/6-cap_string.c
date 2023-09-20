@@ -1,21 +1,21 @@
 #include "main.h"
 
+/**
+ * _islower - function that takes
+ * @c: eeeeefaf
+ * Description: awefwfawer eif wieh wef
+ * Return: aefrf
+ */
+int _islower(char c)
+{
+	return (c >= 'a' && c <= 'z');
+}
 
 /**
  * cap_string - function returns char array
  * @str: array of char
  * Return: str1
  */
-
-/**
- * _isLower - fewaf
- * @c: eeeeefaf
- * Return: aefrf
- */
-int _isLower(char c)
-{
-	return (c >= 'a' && c <= 'z');
-}
 
 char *cap_string(char *str)
 {
