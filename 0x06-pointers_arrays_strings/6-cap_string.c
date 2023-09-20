@@ -6,6 +6,12 @@
  * @str: array of char
  * Return: str1
  */
+
+/**
+ * _isLower - fewaf
+ * @c: eeeeefaf
+ * Return: aefrf
+ */
 int _isLower(char c)
 {
 	return (c >= 'a' && c <= 'z');
