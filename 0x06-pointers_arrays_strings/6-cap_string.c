@@ -10,20 +10,23 @@
 char *cap_string(char *str)
 {
 	char *str1 = str;
+	int i, foundSep = 1;
 	char separators[] = " \t\n,;.!?\"(){}";
-	int i;
 
 	while (*str)
 	{
-x:
-		for (i = 0; i < 13; i++)
+
+		for (i = 0; i < 12; i++)
+			if (*str == separators[i])
+				foundSep = 1;
+		else if (islower(*str) && foundSep)
 		{
-			if (*str == separators[i] && islower(*(str + 1)))
-				*++str -= ('a' - 'A');
+			*str -= 'a' - 'A';
+			foundSep = 0;
 		}
+		else
+			foundSep = 0;
 		str++;
-		if (*str != '\0')
-			goto x;
 	}
-		return (str1);
+	return (str1);
 }
