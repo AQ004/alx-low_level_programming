@@ -19,8 +19,7 @@ char *leet(char *str)
 	while (*str)
 	{
 		for (i = 0; i < sizeof(letters); i++)
-			if (*str == letters[i] ||
-					*str == letters[i] - 'a' + 'A')
+			if (*str == letters[i] || *str == letters[i] - 'a' + 'A')
 				*str = replaces[i] + '0';
 		str++;
 	}
