@@ -22,7 +22,7 @@ char *cap_string(char *str)
 				*++str -= ('a' - 'A');
 		}
 		str++;
-		} while (*str != '\0')
+		} while (*str != '\0');
 	}
 		return (str1);
 }
