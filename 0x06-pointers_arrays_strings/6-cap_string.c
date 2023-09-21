@@ -18,7 +18,7 @@ char *cap_string(char *str)
 		for (i = 0; i < 13; i++)
 		{
 			if (*str == separators[i] && islower(*(str + 1)))
-				*++str -= ('a' - 'A');
+				*(str+1) -= ('a' - 'A');
 		}
 		str++;
 	}
