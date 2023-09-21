@@ -10,13 +10,13 @@
 char *cap_string(char *str)
 {
 	char *str1 = str;
-	char separators[] = " 	\t\n;,.!?\"(){}";
+	char separators[] = " \t\n;,.!?\"(){}";
 	int i;
 
 	while (*str)
 	{
 x:
-		for (i = 0; i < 14; i++)
+		for (i = 0; i < 13; i++)
 		{
 			if (*str == separators[i] && islower(*(str + 1)))
 				*++str -= ('a' - 'A');
