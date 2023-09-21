@@ -18,9 +18,12 @@ char *rot13(char *str)
 
 	while (*str)
 	{
-		for (i = 0; i <= 26 * 2; i++)
+		for (i = 0; i < 26 * 2; i++)
 			if (*str == alphabetic[i])
+			{
 				*str = rot13[i];
+				break;
+			}
 		str++;
 	}
 	return (str1);
