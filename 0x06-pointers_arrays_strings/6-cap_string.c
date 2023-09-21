@@ -15,15 +15,14 @@ char *cap_string(char *str)
 
 	while (*str)
 	{
-x:
+		do {
 		for (i = 0; i < 13; i++)
 		{
 			if (*str == separators[i] && islower(*(str + 1)))
 				*++str -= ('a' - 'A');
 		}
 		str++;
-		if (*str != '\0')
-			goto x;
+		} while (*str != '\0')
 	}
 		return (str1);
 }
