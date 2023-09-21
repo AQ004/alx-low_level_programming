@@ -20,7 +20,7 @@ char *cap_string(char *str)
 			if (*str == separators[i] && islower(*(str + 1)))
 				*++str -= ('a' - 'A');
 		}
-		str++;
+		*str++;
 	}
 		return (str1);
 }
