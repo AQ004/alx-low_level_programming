@@ -4,12 +4,13 @@
  * _strstr - char function
  * @haystack: pointer to char
  * @needle: pointer to char
- * Return: haystack+i_1
+ * Return: haystack+i_0
  */
 
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
+
 	for (i = 0; haystack[i] > '\0'; i++)
 	{
 		/* it iterates to */
