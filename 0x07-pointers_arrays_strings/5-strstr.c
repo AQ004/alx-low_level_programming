@@ -31,7 +31,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack != '\0')
 	{
-		if ((*haystack == *needle) && compareBet(haystack, needle)
+		if ((*haystack == *needle) && compareBet(haystack, needle))
 			return (haystack);
 		haystack++;
 	}
