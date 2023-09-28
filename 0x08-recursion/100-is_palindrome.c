@@ -32,6 +32,6 @@ int is_palindrome(char *s)
 {
 	char *lastCh = s + strlen(s) - 1;
 
-	palindrome(s, lastCh);
+	return (palindrome(s, lastCh));
 }
 
