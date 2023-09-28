@@ -12,10 +12,10 @@
 
 int palindrome(char *s, char *lastCh)
 {
-	if (s == lastCh || s == lastCh - 1)
-		return (1);
 	if (*s != *lastCh)
 		return (0);
+	if (s == lastCh || s == lastCh - 1)
+		return (1);
 	/*	if (*s == *lastCh)	*/
 	return (palindrome(s + 1, lastCh - 1));
 }
