@@ -17,7 +17,7 @@ int palindrome(char *s, char *lastCh)
 	if (*s != *lastCh)
 		return (0);
 	if (*s == *lastCh)
-		palindrome(s + 1, lastCh - 1);
+		return (palindrome(s + 1, lastCh - 1));
 }
 
 /**
