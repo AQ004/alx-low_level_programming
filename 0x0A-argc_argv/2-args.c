@@ -1,23 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - print arguments it receives.
- * @argc: num of arguments.
- * @argv: ar of arguments.
+ * main - Entry point.
+ * @argc: no of arg.
+ * @argv: array of arg and fileName.
  *
  * Return: Always 0 (Success).
  */
 
 int main(int argc, char *argv[])
 {
-	/* body */
+	/*	body	*/
 	int i;
 
 	for (i = 0; i < argc; i++)
-	{
 		printf("%s\n", argv[i]);
-	}
-
 	return (0);
 }
 
