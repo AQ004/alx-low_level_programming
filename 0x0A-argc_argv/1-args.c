@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - Entry point
- * @argc: fgh
- * @argv: jkl
+ * main - Entry point.
+ * @argc: no. of arg.
+ * @argv: arg. array.
  *
- * Return: 0 or 1 ..
+ * Return: Always 0 (Success)
  */
 
 int main(int argc, char *argv[] __attribute__((unused)))
