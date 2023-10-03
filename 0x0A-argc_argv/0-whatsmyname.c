@@ -2,16 +2,14 @@
 
 /**
  * main - Entry point
- * @argc: awd
- * @argv: axd
- * Return: Always 0
+ * @argc: no. of arguments
+ * @argv: char array
+ * Return: Always 0 (Success)
  */
 
-int main(int argc, char const *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	/*	body	*/
-	(void)argc;
-	printf("%s\n", argv[0]);
+	printf("%s \n", argv[0]);
 	return (0);
 }
 
