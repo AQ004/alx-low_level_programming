@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		count++, a -= 2;
 	while (a >= 1)
 		count++, a -= 1;
-	printf("%d", count);
+	printf("%d\n", count);
 	return (0);
 }
 
