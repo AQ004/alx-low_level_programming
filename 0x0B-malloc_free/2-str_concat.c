@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	strcpy(ptr, s1);
 	strcpy(ptr + strlen(s1), s2);
-
+	/* or strcat(ptr, s2); to concatenate  */
 	return (ptr);
 }
 
