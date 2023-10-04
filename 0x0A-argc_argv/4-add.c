@@ -10,7 +10,7 @@
  * Return: (1) if not numeric, else (0)
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i, j, sum = 0;
 
