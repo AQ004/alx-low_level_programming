@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 	{
 		ptr = malloc(1);
-		*ptr = '\0';
+		ptr[0] = '\0';
 	}
 	else if (s1 == NULL)
 	{
