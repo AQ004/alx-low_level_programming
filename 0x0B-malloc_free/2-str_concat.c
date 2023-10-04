@@ -12,29 +12,17 @@ char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		ptr = malloc(1);
-		ptr[0] = '\0';
-	}
-	else if (s1 == NULL)
-	{
-		ptr = malloc(strlen(s2) + 1);
-		strcpy(ptr, s2);
-	}
-	else if (s2 == NULL)
-	{
-		ptr = malloc(strlen(s1) + 1);
-		strcpy(ptr, s1);
-	}
-	else
-	{
-		ptr = (char *) malloc(strlen(s1) + strlen(s2) + 1);
-		strcpy(ptr, s1);
-		strcpy(ptr + strlen(s1), s2);
-	}
+	/* if null is passed, treat it as empty string */
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	ptr = (char *) malloc(strlen(s1) + strlen(s2) + 1);
 	if (ptr == NULL)
 		return (NULL);
+	strcpy(ptr, s1);
+	strcpy(ptr + strlen(s1), s2);
+
 	return (ptr);
 }
 
