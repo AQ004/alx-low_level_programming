@@ -12,11 +12,13 @@ int word_count(char *s)
 	int i, counter = 0;
 
 	for (i = 0; s[i]; i++)
+	{
 		if (s[i] == ' ')
 			if (s[i + 1] != ' ' && s[i + 1] != '\0')
 				counter++;
 		else if (i == 0)
 			counter++;
+	}
 	counter++;
 	return (counter);
 }
