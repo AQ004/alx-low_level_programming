@@ -13,9 +13,8 @@ int word_count(char *s)
 
 	for (i = 0; s[i]; i++)
 	{
-		if (s[i] == ' ')
-			if (s[i + 1] != ' ' && s[i + 1] != '\0')
-				counter++;
+		if (s[i] == ' ' && (s[i + 1] != ' ' && s[i + 1] != '\0'))
+			counter++;
 		else if (i == 0)
 			counter++;
 	}
