@@ -23,7 +23,7 @@ int word_count(char *s)
 
 /**
  * strtow - wra
- * @s: waw
+ * @str: waw
  *
  * Return: awd
  */
