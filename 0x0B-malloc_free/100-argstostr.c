@@ -55,7 +55,7 @@ char *argstostr(int ac, char **av)
 
 	/* calc. the total_length of the argv + '\n' */
 	for (i = 0; i < ac; i++)
-		total_length += strlen(av[i]) + 1;
+		total_length += _strlen(av[i]) + 1;
 
 	str = malloc((total_length + 1) * sizeof(char));
 	if (str == NULL)
@@ -65,8 +65,8 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++, indexNL++)
 	{
 		/* To copy the index, add \n and repeat */
-		strcpy(str + indexNL, av[i]);
-		indexNL += strlen(av[i]);
+		_strcpy(str + indexNL, av[i]);
+		indexNL += _strlen(av[i]);
 		str[indexNL] = '\n';
 	}
 	str[total_length] = '\0';
