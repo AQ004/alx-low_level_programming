@@ -58,7 +58,7 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 	_strcpy(ptr, s1);
-	_strcpy(ptr + strlen(s1), s2);
+	_strcpy(ptr + _strlen(s1), s2);
 	/* or strcat(ptr, s2); to concatenate  */
 	return (ptr);
 }
