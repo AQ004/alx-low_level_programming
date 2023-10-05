@@ -1,6 +1,11 @@
 #include "main.h"
 
-/***/
+/**
+ * word_count - wra
+ * @s: waw
+ *
+ * Return: awd
+ */
 
 int word_count(char *s)
 {
@@ -16,7 +21,12 @@ int word_count(char *s)
 	return (counter);
 }
 
-/***/
+/**
+ * strtow - wra
+ * @s: waw
+ *
+ * Return: awd
+ */
 
 char **strtow(char *str)
 {
