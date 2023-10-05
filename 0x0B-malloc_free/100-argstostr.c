@@ -32,6 +32,7 @@ char *argstostr(int ac, char **av)
 		indexNL += strlen(av[i]);
 		str[indexNL] = '\n';
 	}
+	str[total_length] = '\0';
 	return (str);
 }
 
