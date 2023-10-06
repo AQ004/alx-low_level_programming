@@ -25,9 +25,9 @@ char *_strncpy(char *dest, char *src, int n)
  * string_nconcat - function that concatenates two strings.
  * @s1: first string.
  * @s2: second string.
- * n: number of bytes
+ * @n: number of bytes
  *
- * Return:
+ * Return: str
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
