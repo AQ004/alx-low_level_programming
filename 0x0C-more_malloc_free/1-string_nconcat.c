@@ -32,15 +32,19 @@ char *_strncpy(char *dest, char *src, int n)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int s1_strlen;
+	int s1_strlen, s2_strlen;
 	char *str;
 
 	for (s1_strlen = 0; s1[s1_strlen] != '\0'; s1_strlen++)
+		;
+	for (s2_strlen = 0; s2[s2_strlen] != '\0'; s2_strlen++)
 		;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	if (n >= s2_strlen)
+		str = s2;
 	str = malloc(s1_strlen + 1 + n);
 	if (str == NULL)
 		return (NULL);
