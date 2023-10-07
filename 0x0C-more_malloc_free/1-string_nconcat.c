@@ -35,15 +35,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int s1_strlen;
 	char *str;
 
+	for (s1_strlen = 0; s1[s1_strlen] != '\0'; s1_strlen++)
+		;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	str = malloc(sizeof(s1) + n);
+	str = malloc(s1_strlen + 1 + n);
 	if (str == NULL)
 		return (NULL);
-	for (s1_strlen = 0; s1[s1_strlen] != '\0'; s1_strlen++)
-		;
 	_strncpy(str, s1, s1_strlen);
 	_strncpy(str + s1_strlen, s2, n);
 	return (str);
