@@ -5,7 +5,7 @@
  * @min: minimum number
  * @max: maximum number
  *
- * Return: arr
+ * Return: the pointer to the newly created array
  */
 
 int *array_range(int min, int max)
@@ -21,6 +21,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	for (i = min, j = 0; i <= max; i++, j++)
 		arr[j] = i;
+	arr[j] = '\0';
 	return (arr);
 }
 
