@@ -50,6 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	_strncpy(str, s1, s1_strlen);
 	_strncpy(str + s1_strlen, s2, n);
+	str[s1_strlen + n] = '\0';
 	return (str);
 }
 
