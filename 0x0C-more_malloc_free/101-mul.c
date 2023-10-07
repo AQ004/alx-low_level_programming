@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i, j, mul;
 
 	if (argc != 3)
 	{
@@ -27,7 +27,8 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				exit(98);
 			}
-	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
-	return (0);
+	mul = atoi(argv[1]) * atoi(argv[2]);
+	printf("%d\n", mul);
+	return (mul);
 }
 
