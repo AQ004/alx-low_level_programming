@@ -1,5 +1,7 @@
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
+
 /**
  * main - Entry point
  * @argc: number of arguments.
@@ -14,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("Error\n")
+		printf("Error\n");
 		exit(98);
 	}
 
