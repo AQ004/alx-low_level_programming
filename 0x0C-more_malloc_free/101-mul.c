@@ -1,78 +1,85 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-/**
- * multiply_no - program that multiplies two positive numbers.
- * @num1: first number.
- * @num2: second number.
- * @result: num1 times num2.
- */
-
-void multiply_no(char *num1, char *num2, char *result)
+char *multiplyBigNumbers(char *s1, char *s2)
 {
-	int i, j, sum, start = 0;
-	int len1 = 0, len2 = 0;
+	char *mul;
+	int i, j, digit1, digit2, carry, resultLength;
+	int lengthNum1 = 0, lengthNum2 = 0;
 
-	if (num1[0] == '0' || num2[0] == '0')
+	while (s1[lengthNum1] != '\0')
+		lengthNum1++;
+	while (s2[lengthNum2] != '\0')
+		lengthNum2++;
+
+	i = lengthNum1;
+	j = lengthNum2;
+	mul = malloc(digit1 = resultLength = i + j);
+	if (!mul)
+		printf("Error\n"), exit(98);
+	while (digit1--)
+		mul[digit1] = 0;
+
+	for (i--; i >= 0; i--)
 	{
-		result[0] = '0';
-		result[1] = '\0';
-		return;
-	}
-
-	while (num1[len1] != '\0')
-		len1++;
-	while (num2[len2] != '\0')
-		len2++;
-
-	for (i = 0; i < len1 + len2; i++)
-		result[i] = '0';
-	result[len1 + len2] = '\0';
-
-	for (i = len1 - 1; i >= 0; i--)
-		for (j = len2 - 1; j >= 0; j--)
+		if (!(s1[i] >= '0' && s1[i] <= '9'))
 		{
-			sum = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] - '0';
-			result[i + j + 1] = sum % 10 + '0';
-			result[i + j] += sum / 10;
+			free(mul);
+			printf("Error\n"), exit(98);
 		}
+		digit1 = s1[i] - '0';
+		carry = 0;
 
-	while (result[start] == '0' && start < len1 + len2 - 1)
-		start++;
-	for (i = 0; i < len1 + len2 - start; i++)
-		result[i] = result[i + start];
-	result[len1 + len2 - start] = '\0';
+		for (j = lengthNum2 - 1; j >= 0; j--)
+		{
+			if (!(s2[j] >= '0' && s2[j] <= '9'))
+			{
+				free(mul);
+				printf("Error\n"), exit(98);
+			}
+			digit2 = s2[j] - '0';
+
+			carry += mul[i + j + 1] + (digit1 * digit2);
+			mul[i + j + 1] = carry % 10;
+
+			carry /= 10;
+		}
+		if (carry)
+			mul[i + j + 1] += carry;
+	}
+	return (mul);
 }
 
-/**
- * main - Entry point
- * @argc: number of arguments.
- * @argv: arguments.
- *
- * Return: exit(98)__printf
- */
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i, j;
-	char *result = malloc(4000 * sizeof(char));
+	char *result;
+	int leading_zeros = 0, i, resultLength;
+	int lengthNum1 = 0, lengthNum2 = 0;
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
-	/*if not number exit with code 98*/
-	for (i = 1; i < argc; i++)
-		for (j = 0; argv[i][j] != '\0'; j++)
-			if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
-				printf("Error\n"), exit(98);
 
-	if (result == NULL)
-		printf("Error\n"), exit(98);
+	while (argv[1][lengthNum1] != '\0')
+		lengthNum1++;
+	while (argv[2][lengthNum2] != '\0')
+		lengthNum2++;
 
-	multiply_no(argv[1], argv[2], result);
-	printf("%s\n", result);
+	resultLength = lengthNum1 + lengthNum2;
+	result = multiplyBigNumbers(argv[1], argv[2]);
+
+	for (i = 0; i < resultLength; i++)
+	{
+		if (result[i])
+			leading_zeros = 1;
+		if (leading_zeros)
+			putchar(result[i] + '0');
+	}
+	if (!leading_zeros)
+		putchar('0');
+	putchar('\n');
 	free(result);
 	return (0);
 }
