@@ -58,6 +58,7 @@ void multiply_no(char *num1, char *num2, char *result)
 int main(int argc, char *argv[])
 {
 	int i, j;
+	char *result = malloc(4000 * sizeof(char));
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
@@ -66,8 +67,6 @@ int main(int argc, char *argv[])
 		for (j = 0; argv[i][j] != '\0'; j++)
 			if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
 				printf("Error\n"), exit(98);
-	/* Allocate a large enough array */
-	char *result = malloc(4000 * sizeof(char));
 
 	if (result == NULL)
 		printf("Error\n"), exit(98);
