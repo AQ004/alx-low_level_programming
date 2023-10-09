@@ -4,6 +4,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * multiplyBigNumbers - function multiplies large numbers.
+ * @s1: first number.
+ * @s2: second number.
+ *
+ * Return: mul
+ */
+
 char *multiplyBigNumbers(char *s1, char *s2)
 {
 	char *mul;
@@ -14,15 +22,12 @@ char *multiplyBigNumbers(char *s1, char *s2)
 		lengthNum1++;
 	while (s2[lengthNum2] != '\0')
 		lengthNum2++;
-
-	i = lengthNum1;
-	j = lengthNum2;
+	i = lengthNum1, j = lengthNum2;
 	mul = malloc(digit1 = resultLength = i + j);
 	if (!mul)
 		printf("Error\n"), exit(98);
 	while (digit1--)
 		mul[digit1] = 0;
-
 	for (i--; i >= 0; i--)
 	{
 		if (!(s1[i] >= '0' && s1[i] <= '9'))
@@ -30,9 +35,7 @@ char *multiplyBigNumbers(char *s1, char *s2)
 			free(mul);
 			printf("Error\n"), exit(98);
 		}
-		digit1 = s1[i] - '0';
-		carry = 0;
-
+		digit1 = s1[i] - '0', carry = 0;
 		for (j = lengthNum2 - 1; j >= 0; j--)
 		{
 			if (!(s2[j] >= '0' && s2[j] <= '9'))
@@ -52,6 +55,14 @@ char *multiplyBigNumbers(char *s1, char *s2)
 	}
 	return (mul);
 }
+
+/**
+ * main - Entry point
+ * @argc: argument counter.
+ * @argv: argument vector.
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(int argc, char **argv)
 {
