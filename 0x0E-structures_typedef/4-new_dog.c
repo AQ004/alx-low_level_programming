@@ -3,17 +3,36 @@
 #include <stdlib.h>
 
 /**
+ * stringCopyFunc - Function copies a string
+ * @dest: Destination
+ * @src: Source
+ *
+ * Return: destination
+ */
+
+char *stringCopyFunc(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
+	return (dest);
+}
+
+/**
  * new_dog - function that creates a new dog
  * @name: name of the new dog.
  * @age: age of the new Dog.
  * @owner: owner of that dog
  *
- * Return: no return
+ * Return: Dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i, j;
+
 	dog_t *Dog;
 
 	for (i = 0; name[i] != '\0'; i++)
@@ -38,9 +57,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(Dog), free(Dog->name);
 		return (NULL);
 	}
-	Dog->name = name;
-	Dog->age = age;
-	Dog->owner = owner;
+	stringCopyFunc(Dog->name, name);
+	stringCopyFunc(Dog->owner, owner);
+	(*Dog).age = age;
 	return (Dog);
 }
 
