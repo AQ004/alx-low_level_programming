@@ -1,5 +1,5 @@
 #include "3-calc.h"
-
+#include <stdio.h>
 /**
  * main - Entry point.
  * @argc: argument counter.
@@ -22,8 +22,6 @@ int main(int argc, char *argv[])
 	function = get_op_func(argv[2]);
 	if (!function)
 		printf("Error\n"), exit(99);
-	if (!num2 && (argv[2][0] == '%' || argv[2][0] == '/'))
-		printf("Error\n"), exit(100);
 	printf("%d\n", function(num1, num2));
 	return (0);
 }
