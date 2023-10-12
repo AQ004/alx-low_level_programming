@@ -1,5 +1,5 @@
 #ifndef MACROS_H
-#define MACROS
+#define MACROS_H
 #include <stdio.h>
 #include <stdlib.h>
 
