@@ -45,7 +45,7 @@ void print_all(const char * const format, ...)
 
 /**
  * print_char - function to print character
- * @separate: separator
+ * @Separate: separator
  * @x: va_list (arg. pointer)
  */
 void print_char(char *Separate, va_list x)
@@ -54,7 +54,7 @@ void print_char(char *Separate, va_list x)
 }
 /**
  * print_int - function to print integer.
- * @separate: separator
+ * @Separate: separator
  * @x: va_list (arg. pointer)
  */
 void print_int(char *Separate, va_list x)
@@ -63,7 +63,7 @@ void print_int(char *Separate, va_list x)
 }
 /**
  * print_float - function to print float
- * @separate: separator
+ * @Separate: separator
  * @x: va_list (arg. pointer)
  */
 void print_float(char *Separate, va_list x)
@@ -72,7 +72,7 @@ void print_float(char *Separate, va_list x)
 }
 /**
  * print_string - function to print string
- * @separate: separator
+ * @Separate: separator
  * @x: va_list (arg. pointer)
  */
 void print_string(char *Separate, va_list x)
