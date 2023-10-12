@@ -1,5 +1,5 @@
-#ifndef MACROS_H
-#define MACROS_H
+#ifndef CALC_H
+#define CALC_H
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,7 +9,6 @@
  * @op: The operator
  * @f: The function associated
  */
-
 typedef struct op
 {
     char *op;
