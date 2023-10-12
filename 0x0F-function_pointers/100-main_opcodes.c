@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 	bytes = atoi(argv[1]);
 	if (bytes < 0)
 		printf("Error\n"), exit(2);
-	for (; b;)
-		printf("%02hhx%s", *p++, --b ? " " : "\n");
+	for (; bytes;)
+		printf("%02hhx%s", *ptr++, --bytes ? " " : "\n");
 	return (0);
 }
 
