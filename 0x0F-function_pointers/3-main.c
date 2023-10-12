@@ -22,6 +22,8 @@ int main(int argc, char *argv[])
 	function = get_op_func(argv[2]);
 	if (!function)
 		printf("Error\n"), exit(99);
+	if (!num2 && (argv[2][0] == '%' || argv[2][0] == '/'))
+		printf("Error\n"), exit(99);
 	printf("%d\n", function(num1, num2));
 	return (0);
 }
