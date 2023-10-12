@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if (!function)
 		printf("Error\n"), exit(99);
 	if (!num2 && (argv[2][0] == '%' || argv[2][0] == '/'))
-		printf("Error\n"), exit(99);
+		printf("Error\n"), exit(100);
 	printf("%d\n", function(num1, num2));
 	return (0);
 }
