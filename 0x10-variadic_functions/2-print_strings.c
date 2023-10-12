@@ -11,10 +11,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list x;
 	unsigned int i;
-	char *str;
 
 	if (separator == NULL)
-		printf("");
+		separator = "";
 
 	va_start(x, n);
 	for (i = 0; i < n; i++)
