@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	function = get_op_func(argv[2]);
 	if (!function)
 		printf("Error\n"), exit(99);
-	printf("%d\n", op_func(a, b));
+	printf("%d\n", function(num1, num2));
 	return (0);
 }
 
