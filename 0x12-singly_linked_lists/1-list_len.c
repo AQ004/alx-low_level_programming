@@ -13,7 +13,7 @@ size_t list_len(const list_t *h)
 	size_t Counter = 0;
 
 	while (h)
-		Counter++, h->next;
+		Counter++, h = h->next;
 	return (Counter);
 }
 
