@@ -7,7 +7,7 @@
 void _function100(void) __attribute__ ((constructor));
 void _function100(void)
 {
-	printf("You're beat! and yet, you must allow,\n
-			I bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n"
+			"I bore my house upon my back!\n");
 }
 
