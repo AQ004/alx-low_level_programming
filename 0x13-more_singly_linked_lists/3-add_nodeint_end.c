@@ -3,9 +3,9 @@
 /**
  * add_nodeint_end - adds a new node at the end of a listint_t list.
  * @head: double pointer to the head of the node.
- * n: integer value in the new node
+ * @n: integer value in the new node
  *
- * Return:
+ * Return: adrress of the new node.
  */
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
@@ -17,5 +17,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	new->n = n;
 	*head->next = new;
 	*head = new;
+	return (new);
 }
 
