@@ -10,15 +10,11 @@
  * @next: pointer to  next node
  */
 
-typedef struct listint{
+typedef struct listint
+{
 	int n;
 	struct listint *next;
 } listint_t;
-
-
-/**
- * Functions
- */
 
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
