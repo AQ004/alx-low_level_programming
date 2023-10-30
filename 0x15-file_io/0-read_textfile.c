@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* read write O_RDWR */
 	n = read(fileDescriptor, Buffer, letters);
-	n = write(1, Buffer, n);
+	n = write(STDOUT_FILENO, Buffer, n);
 
 	close(fileDescriptor);
 	return (n);
