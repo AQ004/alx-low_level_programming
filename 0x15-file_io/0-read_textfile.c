@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t n;
 	char Buffer[1024 * 8];
 
-	if (filename == NULL)
+	if (filename == NULL || !letters)
 		return (0);
 	fileDescriptor = open(filename, O_RDONLY);
 	if (fileDescriptor == -1)
@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		Buffer[n] = '\0';
 	if (write(1, Buffer, n) != n)
 		n = 0;
-	close (fileDescriptor);
+	close(fileDescriptor);
 	return (n);
 }
 
