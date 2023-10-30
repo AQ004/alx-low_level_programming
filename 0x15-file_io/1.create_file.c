@@ -45,7 +45,7 @@ int create_file(const char *filename, char *text_content)
 		n = 0;
 
 	/* Check if write was successful */
-	if (n == -1 || n != strlen(text_content))
+	if (n == -1 || n != _strlen(text_content))
 		n = -1;
 
 	/* Close the file */
