@@ -19,13 +19,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fileDescriptor = open(filename, O_RDONLY);
 	if (fileDescriptor == -1)
 		return (0);
+
+	/* read write O_RDWR */
 	n = read(fileDescriptor, Buffer, letters);
-	if (n == -1)
-		n = 0;
-	else
-		Buffer[n] = '\0';
-	if (write(1, Buffer, n) != n)
-		n = 0;
+	n = write(1, Buffer, n);
+
 	close(fileDescriptor);
 	return (n);
 }
