@@ -1,6 +1,23 @@
 #include "main.h"
 
 /**
+ * _strlen - function that returns the length of a string.
+ * @s: pointer to char
+ *
+ * Return: length of the array
+ */
+
+int _strlen(char *s)
+{
+	int counter;
+
+	for (counter = 0; s[counter] != '\0'; counter++)
+		;
+	return (counter);
+}
+
+
+/**
  * create_file - function that creates a file.
  * @filename: asd
  * @text_content: asd
@@ -22,8 +39,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	/* Write to the file */
-	n = (text_content != NULL) ?
-		write(file, text_content, strlen(text_content)) : 0;
+	if (!text_content)
+		n = write(file, text_content, _strlen(text_content));
+	else
+		n = 0;
 
 	/* Check if write was successful */
 	if (n == -1 || n != strlen(text_content))
