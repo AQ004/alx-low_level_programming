@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fileDescriptor;
 	ssize_t n;
-	char Buffer[letters + 1];
+	char Buffer[1024 * 8];
 
 	if (filename == NULL)
 		return (0);
@@ -21,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	n = read(fileDescriptor, Buffer, letters);
 	if (n == -1)
-		n == 0;
+		n = 0;
 	else
 		Buffer[n] = '\0';
 	if (write(1, Buffer, n) != n)
