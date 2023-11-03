@@ -29,16 +29,15 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int fileD;
 	ssize_t n = 0;
-	ssize_t len = 0;
+	ssize_t len = _strlen(text_content);
 
 	if (!filename)
 		return (-1);
 	fileD = open(filename, O_WRONLY | O_APPEND);
 	if (fileD == -1)
 		return (-1);
-	if (len != NULL)
+	if (len)
 	{
-		len = _strlen(text_content);
 		n = write(fileD, text_content, len);
 	}
 	close(fileD);
