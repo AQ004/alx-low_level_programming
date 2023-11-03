@@ -299,7 +299,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 
 	if_elf(Header1->e_ident);
-	printf("ELF Header1:\n");
+	printf("ELF Header:\n");
 	_magic(Header1->e_ident);
 	_Class(Header1->e_ident);
 	_DATA(Header1->e_ident);
